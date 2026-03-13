@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 public class DecodeStrings {
 
     /*
@@ -26,6 +28,50 @@ which would workf or if the thigns are nested still
 
 
 
+    public static String decode(String s){
+
+        LinkedList<Integer> countstack = new LinkedList<>();
+        LinkedList<String> stringstack2 = new LinkedList<>();
+
+        String cur = "";
+        int track= 0;
+
+
+        for (int i = 0; i < s.length(); i++){
+            char c = s.charAt(i);
+            if (Character.isDigit(c)){
+                ///
+            } // end fi
+
+            else if (c == '['){ //braket not parentehese
+                countstack.add(i); // add insetad of push again?
+                stringstack2.add(cur);
+                cur = "";
+                track = 0;
+            }
+            else if (c == ']'){
+                int index = countstack.remove();
+                String temp = stringstack2.remove();
+
+                String temp2 = temp;
+                for (int k = 0; k < index; k++){
+                    temp+= cur;
+
+                }
+                cur = temp;
+
+            }
+            else {
+                cur +=c;
+            }
+
+        }// end for
+
+
+
+
+        return cur;
+    }
 
 
 
