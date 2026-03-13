@@ -11,6 +11,8 @@ im going to go through the string one char at a time so ill convert it to a char
 then if its an opening one ill push onto stack and if its a closing then ill popit if not then ill continue checking them
 chill
 
+i am supposed to use not push and pop bruh
+
 then time complexity is just O(n) because I go through each thing just once - elemnt in char aray which is length of string
  */
 
@@ -21,23 +23,24 @@ then time complexity is just O(n) because I go through each thing just once - el
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (c == '{' || c == '[' || c == '(' || c == '<' || c == '¿') {
-                stack.push(c);
+                stack.add(c);
             }
-            else{
+            else {
                 if (stack.isEmpty()) return "NO";
-            }
 
-            char top = stack.peek();
 
-            if ((c == ')' && top == '(') ||
-                    (c == ']' && top == '[') ||
-                    (c == '}' && top == '{') ||
-                    (c == '>' && top == '<') ||
-                    (c == '?' && top == '¿')) {
-                stack.pop();
-            }// end if
-            else{
-                return "NO";
+                char top = stack.peek();
+
+                if ((c == ')' && top == '(') ||
+                        (c == ']' && top == '[') ||
+                        (c == '}' && top == '{') ||
+                        (c == '>' && top == '<') ||
+                        (c == '?' && top == '¿')) {
+                    stack.remove();
+                }// end if
+                else {
+                    return "NO";
+                }
             }
 
         }// end for loop
@@ -47,4 +50,4 @@ then time complexity is just O(n) because I go through each thing just once - el
         return "NO";
     }
 
-}
+}// END LAST BRACKET CLASS
