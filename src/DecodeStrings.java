@@ -40,11 +40,12 @@ which would workf or if the thigns are nested still
         for (int i = 0; i < s.length(); i++){
             char c = s.charAt(i);
             if (Character.isDigit(c)){
-                ///
+                ///oos i gorot this part
+            track = track * 10 + c - '0';
             } // end fi
 
             else if (c == '['){ //braket not parentehese
-                countstack.add(i); // add insetad of push again?
+                countstack.add(track); // add insetad of push again?
                 stringstack2.add(cur);
                 cur = "";
                 track = 0;
