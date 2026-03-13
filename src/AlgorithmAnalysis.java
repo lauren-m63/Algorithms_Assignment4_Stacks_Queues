@@ -21,8 +21,8 @@ time complexity is O(m+k) where m is the length of the given string input and k 
 everytime you run the algorithm you iterate through each character exactly once for the length of the string, then you also repeat
 the substring k times which creates a new variable everytime so you touch that substring k times
 
-the space complexity is O(m + n) where m is the length of the given strings bracket characters and n is the length of the substring
-because I store my characters symbols at most one time in the stack and store previous substrings at most one time in a stack
+the space complexity is O(m + n) where m is the length of the given strings and n is the length of the output substring
+because I store my characters symbols at most one time in the stack and store the character substrings to be output at most one time in my cur variable output string
 
 
 
