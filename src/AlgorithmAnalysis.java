@@ -15,7 +15,21 @@ you store only the opening symbols onto the stack so the worst case scenario wou
 characters were opening characters because then all of them would be pushed onto the stack up to n
 
 
+5. decode string
 
+concatenacing string makes a new srting everytime to keep for space and then also this bc thats a hwole time oepration
+so you go through list and make new string k so its m plus k
+its n times k woah
+
+time complexity is O(m+k) where m is the length of the given string input and k is the amount you repeat the given substring ebecause
+everytime you run the algorithm you iterate through each character exactly once for the length of the string, then you also repeat
+the substring k times which creates a new variable everytime so you touch that substring k times
+
+the space complexity is O(m + n) where m is because I store my characters
+
+space is the same idea i have ym two stacks and then i create the varibaes k time
+then my stakc memory could go up to the string length so then its jsut the same
+its no its the strin glength for the stack and then also the other thing okayy
 
 
 
